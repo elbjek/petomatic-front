@@ -138,7 +138,7 @@ export default {
           date_of_birth: this.date
         }
         this.axios
-        .post('http://localhost:3200/pets/create', this.newPet)
+        .post('http://localhost:3200/pets/edit/' + this.$route.params.clientId, this.newPet)
         .then(function (response) {
           console.log(response.data)
         })
@@ -196,7 +196,6 @@ export default {
                 this.date = this.allPets[i].date_of_birth
               }
         })     
-               
         .catch(err => {
             console.log(err)
         })

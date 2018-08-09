@@ -25,6 +25,7 @@
       <v-expansion-panel-content 
         v-for="pet in customer"
         :key="pet.id">
+        
           <div slot="header">{{pet.name}}</div>
             <v-card >
               <v-card-media height="100px" src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"></v-card-media>
@@ -32,7 +33,7 @@
               <div>
                 <div style="display:flex; justify-content:space-between; flex-direction:row">
                 <h3 class="headline mb-0">{{pet.name}}</h3>
-                <a :href="'/pet/edit/' + $route.params.clientId"><v-icon>edit</v-icon></a>
+                <a :href="'/pet/edit/' + pet.pets_id"><v-icon>edit</v-icon></a>
                 </div>
                 <p> Breed: {{pet.breed}}</p>
                 <p>Gender: {{pet.sex}}</p>              
